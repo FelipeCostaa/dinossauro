@@ -1,7 +1,7 @@
 #ifndef DINOSSAURO_H
 #define DINOSSAURO_H
 
-#define TAM 16
+#define TAM 32
 #define TRUE 1
 #define FALSE 0
 

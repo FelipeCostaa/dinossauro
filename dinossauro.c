@@ -39,24 +39,31 @@ dinossauro preencheVariaveisPt1(dinossauro *dino)
 {
   char linha[TAM];
 
+  int contLinha = 0;
+  int contCampo = 0;
+  int i = 0;
+
   while (fgets(linha, sizeof(linha), arq))
   {
-    char *token;
+    char *token = strtok(linha, "\n"); // separa as linhas do arquivo de entrada
+    printf("%s", token);
 
-    token = strtok(linha, "\n");
-
-    while (token != NULL)
+    contCampo = 0;
+    contLinha++;
+    if (contLinha == 1)
     {
-      printf("%s", token);
-      token = strtok(NULL, "\n");
+      dino->numBlocos = atoi(token);
     }
+
+    // char *valor = strtok(linha, " ");
+
     printf("\n");
   }
 
   return *dino;
 }
 
-void abreArq()
+void abreArq() // abre o arquivo com os dados do dinossauro
 {
   char nomeArquivo[TAM];
   char enderecoArqEntrada[TAM] = "arqEntrada//";
@@ -70,7 +77,7 @@ void abreArq()
   arq = fopen(enderecoArqEntrada, "r");
   if (arq == NULL)
   {
-    printf("\nErro!Arquivo de entrada inexistente!\n");
+    printf("\nErro! Arquivo de entrada inexistente!\n");
     // exit(1);
   }
   else

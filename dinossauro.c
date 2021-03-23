@@ -55,7 +55,15 @@ dinossauro preencheVariaveisPt1(dinossauro *dino)
       dino->numBlocos = atoi(token);
     }
 
-    // char *valor = strtok(linha, " ");
+    char *valor = strtok(linha, " ");
+
+    while (valor)
+    {
+      dino->id[contLinha - 1] = atoi(valor);
+
+      valor = strtok(NULL, " ");
+      contCampo++;
+    }
 
     printf("\n");
   }

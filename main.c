@@ -36,7 +36,8 @@ int main(int argc, char const *argv[])
 
       break;
 
-    case 2: // mover
+    case 2:                                              // mover
+      printf("Valor de numBlocos: %d", dino->numBlocos); // teste
 
       break;
 

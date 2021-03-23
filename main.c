@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
   while (1)
   {
     printf("\n1 - Inserir dinossauro\n2 - Mover dinossauro"
-           "\n3 - Quantidade de dinossauros cadastrados\n0 - Sair\n--> ");
+           "\n0 - Sair\n--> ");
     scanf("%d", &menu);
 
     switch (menu)
@@ -36,11 +36,7 @@ int main(int argc, char const *argv[])
 
       break;
 
-    case 3: // mover
-
-      break;
-
-    case 4: // quantidade de dinossauros
+    case 2: // mover
 
       break;
 

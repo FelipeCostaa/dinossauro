@@ -26,8 +26,11 @@ dinossauro *criaDinossauro()
 
   dino->numBlocos = -1;
   dino->id = NULL;
+  dino->id = (int *)malloc(sizeof(int));
   dino->peso = NULL;
+  dino->peso = (int *)malloc(sizeof(int));
   dino->capacidade = NULL;
+  dino->capacidade = (int *)malloc(sizeof(int));
 
   return dino;
 }
